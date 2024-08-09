@@ -39,9 +39,8 @@ if __name__=='__main__':
     org_url = f"{BaseURL.GITHUB_BASE_URL.value}/orgs/{org_name}/repos"
     repository = Repository(org_name, org_url)
     repository.print_args()
-    repo_list = repository.return_repository_list()
-    print(repo_list[0])
+    repo_list = repository.return_repository_list()    
     repo_last_updated = return_last_updated(repo_list)
-    print(repo_last_updated)
+    print(repo_last_updated[:5])
 
 
